@@ -33,7 +33,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
     @Column(nullable = false)
     private String username;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = true ,  unique = true)
     private String phone;
 
     @CreationTimestamp

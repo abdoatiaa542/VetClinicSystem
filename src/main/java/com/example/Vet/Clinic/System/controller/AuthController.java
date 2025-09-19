@@ -40,14 +40,14 @@ public class AuthController {
                 .body(service.registerAdmin(request));
     }
 
-    @PostMapping("/register/librarian")
+    @PostMapping("/register/owner")
     public ResponseEntity<?> registerOwner(@Valid @RequestBody RegistrationRequest request) {
         log.info("Registering new Librarian: {}", request.username());
         return ResponseEntity.created(URI.create("/api/v1/auth/user-registration"))
                 .body(service.registerOwner(request));
     }
 
-    @PostMapping("/register/user")
+    @PostMapping("/register/Doctor")
     public ResponseEntity<?> registerDoctor(@Valid @RequestBody RegistrationRequest request) {
         log.info("Registering new User: {}", request.username());
         return ResponseEntity.created(URI.create("/api/v1/auth/user-registration"))
