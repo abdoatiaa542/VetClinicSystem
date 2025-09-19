@@ -85,3 +85,9 @@ Built using **Spring Boot**, **Spring MVC**, **Hibernate (JPA Annotations)**, an
 
 ## Project Structure
 
+
+## Postman Documentation
+You can explore and test all API endpoints using the Postman collection provided [here](https://documenter.getpostman.com/view/33214421/2sB3HtEbtk).
+
+
+
