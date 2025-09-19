@@ -1,0 +1,4 @@
+package com.example.Vet.Clinic.System.service.owner;
+
+public class DoctorService {
+}

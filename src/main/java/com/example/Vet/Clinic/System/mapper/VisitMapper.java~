@@ -1,0 +1,4 @@
+package com.example.Vet.Clinic.System.mapper;
+
+public class VisitMapper {
+}

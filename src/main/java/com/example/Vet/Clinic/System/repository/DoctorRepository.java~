@@ -1,0 +1,4 @@
+package com.example.Vet.Clinic.System.repository;
+
+public interface DoctorRepository {
+}

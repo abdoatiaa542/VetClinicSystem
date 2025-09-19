@@ -1,0 +1,37 @@
+package com.example.Vet.Clinic.System.model.users;
+
+
+import com.example.Vet.Clinic.System.model.Clinic;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "doctors")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Doctor extends User {
+
+    @Column(nullable = true)
+    private String photo;
+
+    @Column(length = 1000)
+    private String bio;
+
+    @ManyToOne
+    @JoinColumn(name = "clinic_id", nullable = false)
+    private Clinic clinic;
+
+}
+
+
+
+
+
+
+
+

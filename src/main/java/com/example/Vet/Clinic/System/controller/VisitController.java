@@ -1,0 +1,30 @@
+package com.example.Vet.Clinic.System.controller;
+
+import com.example.Vet.Clinic.System.dto.VisitRequest;
+import com.example.Vet.Clinic.System.service.VisitService;
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/visits")
+@RequiredArgsConstructor
+public class VisitController {
+
+    private final VisitService visitService;
+    private static final Logger log = LoggerFactory.getLogger(VisitController.class);
+
+    @PostMapping
+    public ResponseEntity<?> addVisit(@RequestBody VisitRequest request) {
+        log.info("Adding new visit for pet ID: {}", request.petId());
+        return ResponseEntity.ok(visitService.addVisit(request));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getVisitById(@PathVariable Long id) {
+        log.info("Fetching visit with ID: {}", id);
+        return ResponseEntity.ok(visitService.getVisitById(id));
+    }
+}

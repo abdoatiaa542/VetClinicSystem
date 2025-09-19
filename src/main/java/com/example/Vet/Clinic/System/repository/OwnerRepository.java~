@@ -1,0 +1,3 @@
+package com.example.Vet.Clinic.System.repository;
+
+public interface OwnerRepository extends JpaRepository<Owner, Long> {}

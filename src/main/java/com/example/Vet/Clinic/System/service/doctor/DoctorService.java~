@@ -1,0 +1,9 @@
+package com.example.Vet.Clinic.System.service.doctor;
+
+import com.example.Vet.Clinic.System.dto.ApiResponse;
+import com.example.Vet.Clinic.System.dto.DoctorRequest;
+
+public interface DoctorService {
+    ApiResponse addDoctor(DoctorRequest request, Long clinicId);
+    ApiResponse getDoctorById(Long id);
+}
